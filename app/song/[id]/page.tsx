@@ -10,18 +10,20 @@ export async function generateStaticParams() {
   }));
 }
 
-interface SongPageProps {
-  params: {
-    id: string; // ID from the URL
-  };
-}
+// Remove the custom interface SongPageProps
+// interface SongPageProps {
+//   params: {
+//     id: string; // ID from the URL
+//   };
+// }
 
 // Helper function to find song by ID (can be moved to lib later)
 const getSongById = (id: number) => {
   return playlist.find((song) => song.id === id);
 };
 
-export default function SongPage({ params }: SongPageProps) {
+// Directly type the params in the function signature
+export default function SongPage({ params }: { params: { id: string } }) {
   const songId = parseInt(params.id, 10);
   const song = getSongById(songId);
 

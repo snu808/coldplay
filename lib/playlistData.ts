@@ -294,8 +294,125 @@ For some reason I can't explain
 I know St. Peter won't call my name
 Never an honest word
 But that was when I ruled the world`, youtubeId: "WcOmJ74OIns" },
-  { id: 6, title: "Hymn for the Weekend", lyrics: "", youtubeId: "J54re5Dfixs" },
-  { id: 7, title: "Everglow", lyrics: "", youtubeId: "dX9VEQsDUeY" },
+  { id: 6, title: "Hymn for the Weekend", lyrics: `[Beyoncé:]
+Drink from me, drink from me
+That I shoot across the sky
+Symphony
+That I shoot across the sky
+We're on a...
+Drink from me, drink from me
+That I shoot across the sky
+Symphony
+(So high, so high)
+That I shoot across the sky
+
+[Coldplay:]
+Oh, angel sent from up above
+You know you make my world light up
+When I was down, when I was hurt
+You came to lift me up
+Life is a drink, and love's a drug
+Oh, now I think I must be miles up
+When I was a river, dried up
+You came to rain a flood
+
+[Coldplay & Beyoncé:]
+You said drink from me, drink from me
+When I was so thirsty
+Poured on a symphony
+Now I just can't get enough
+Put your wings on me, wings on me
+When I was so heavy
+Poured on a symphony
+When I'm low, low, low, low
+
+[Coldplay:]
+I, oh, I, oh, I
+Got me feeling drunk and high
+So high, so high
+Oh, I, oh, I, oh, I
+Now I'm feeling drunk and high
+So high, so high
+Woo!
+
+[Coldplay & Beyoncé:]
+Oh, angel sent from up above
+I feel it coursing through my blood
+Life is a drink, your love's about
+To make the stars come out
+
+Put your wings on me, wings on me
+When I was so heavy
+Poured on a symphony
+When I'm low, low, low, low
+
+[Coldplay:]
+I, oh, I, oh, I
+Got me feeling drunk and high
+So high, so high
+Oh I, oh, I, oh, I
+Now I'm feeling drunk and high
+So high, so high
+
+[Beyoncé & Coldplay:]
+I, oh, I, oh, I
+La la la la la la la
+So high, so high
+I, oh, I, oh, I
+I'm feeling drunk and high
+So high, so high
+
+That I shoot across the sky
+That I shoot across the...
+That I shoot across the sky
+Watch me shoot across the..
+That I shoot across the sky
+That I shoot across the...
+That I shoot across the sky
+That I shoot across the...`, youtubeId: "J54re5Dfixs" },
+  { id: 7, title: "Everglow", lyrics: `Oh they say people come
+Say people go
+This particular diamond was extra special
+And though you might be gone
+And the world may not know
+Still I see you celestial
+
+Like a lion you ran
+A goddess you rolled
+Like an eagle you circled
+In perfect purple
+So how come things move on
+How come cars don't slow
+When it feels like the end of my world?
+When I should but I can't let you go?
+
+But when I'm cold, cold
+When I'm cold, cold
+There's a light that you give me
+When I'm in shadow
+There's a feeling you give me, an everglow
+
+Like brothers in blood
+Sisters who ride
+And we swore on that night
+We'd be friends 'til we die
+But the changing of winds
+And the way waters flow
+Life as short as the falling of snow
+And now I'm gonna miss you, I know
+
+But when I'm cold, cold
+In water rolled, salt
+And I know that you're with me
+And the way you will show
+And you're with me wherever I go
+'Cause you give me this feeling, this everglow
+
+What I wouldn't give for just a moment to hold
+Yeah, I live for this feeling, this everglow
+
+So if you love someone, you should let them know
+Oh, the light that you left me will everglow`, youtubeId: "dX9VEQsDUeY" },
   { id: 8, title: "Charlie Brown", lyrics: "", youtubeId: "VV2GaMLv1g4" },
   { id: 9, title: "Yellow", lyrics: "", youtubeId: "-Irv9HKGIco" },
   { id: 10, title: "ALL MY LOVE", lyrics: "", youtubeId: "4NKhYkFAmUw" },
