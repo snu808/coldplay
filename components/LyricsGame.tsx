@@ -40,10 +40,10 @@ export default function LyricsGame({ lyrics }: LyricsGameProps) {
       lineIndex,
       words: line.split(/([\s.,!?;:"()]+)/)
                 .filter(part => part)
-                .map((part, partIndex) => {
+                .map((part, index) => {
                   const isWord = !/^[\s.,!?;:"()]+$/.test(part) && part.length > 0;
                   let isBlank = false;
-                  const key = `${lineIndex}-${partIndex}`;
+                  const key = `${lineIndex}-${index}`;
 
                   if (isWord) {
                     wordCounter++;
@@ -86,13 +86,13 @@ export default function LyricsGame({ lyrics }: LyricsGameProps) {
   };
 
   return (
-    <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded">
+    <div className="p-6 bg-gray-900/50 backdrop-blur-sm rounded shadow-lg text-gray-100">
       {processedLyrics.map(({ lineIndex, words }) => (
         <div key={lineIndex} className="mb-2 leading-relaxed">
           {words.map(({ text, isWord, isBlank, key }) => {
             if (isBlank) {
               const result = results[key];
-              let borderColor = 'border-gray-400';
+              let borderColor = 'border-gray-500';
               if (showResults) {
                 borderColor = result === true ? 'border-green-500' : 'border-red-500';
               }
@@ -104,14 +104,14 @@ export default function LyricsGame({ lyrics }: LyricsGameProps) {
                   placeholder="..."
                   value={userInputs[key] || ''}
                   onChange={(e) => handleInputChange(e, key)}
-                  className={`inline-block w-24 px-1 py-0.5 mx-1 border-2 ${borderColor} rounded bg-white dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-1 focus:ring-blue-500 align-baseline`}
-                  disabled={showResults && result === true} // Disable correct answers after check
+                  className={`inline-block w-24 px-1 py-0.5 mx-1 border-2 ${borderColor} rounded bg-gray-800/60 text-gray-100 focus:outline-none focus:ring-1 focus:ring-teal-400 align-baseline`}
+                  disabled={showResults && result === true}
                 />
               );
             } else if (isWord) {
               return <span key={key}>{text}</span>;
             } else {
-              return <span key={key}>{text}</span>; // Render whitespace/punctuation
+              return <span key={key}>{text}</span>;
             }
           })}
         </div>
@@ -119,8 +119,8 @@ export default function LyricsGame({ lyrics }: LyricsGameProps) {
       <div className="mt-6 text-center">
         <button
           onClick={checkAnswers}
-          className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 disabled:opacity-50"
-          disabled={showResults} // Disable after checking until changes are made
+          className="px-6 py-2 bg-teal-500 text-white rounded hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50 disabled:opacity-50 shadow-md"
+          disabled={showResults}
         >
           Check Answers
         </button>

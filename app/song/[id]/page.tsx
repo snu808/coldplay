@@ -52,9 +52,9 @@ export default function SongPage({ params }: SongPageProps) {
         {/* Keep the full lyrics display for reference if needed */}
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-3">Full Lyrics</h2>
-          <details className="p-4 bg-gray-100 dark:bg-gray-800 rounded whitespace-pre-line opacity-75">
-            <summary className="cursor-pointer">Show/Hide Full Lyrics</summary>
-            <div className="mt-2">
+          <details className="p-4 bg-gray-900/40 backdrop-blur-sm rounded whitespace-pre-line opacity-90 shadow-lg">
+            <summary className="cursor-pointer font-medium text-teal-300 hover:text-teal-200">Show/Hide Full Lyrics</summary>
+            <div className="mt-3 text-gray-200">
               {song.lyrics || "Lyrics not available."}
             </div>
           </details>
