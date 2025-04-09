@@ -10,10 +10,11 @@ export async function generateStaticParams(): Promise<{ id: string }[]> {
   }));
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore // Workaround for persistent CI type error
-export default function SongPage({ params }: { params: { id: string } }) {
-  const id = parseInt(params.id);
+// Rewrite signature to accept props object instead of destructuring params directly
+export default function SongPage(props: { params: { id: string } }) {
+  // Access id via props object
+  const idString = props.params.id;
+  const id = parseInt(idString);
   const song: Song | undefined = playlist.find((s) => s.id === id);
 
   if (!song) {
