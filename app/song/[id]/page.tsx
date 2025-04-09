@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import LyricsGame from '@/components/LyricsGame'; // Import the game component
 
 // Required for static export with dynamic routes
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ id: string }[]> {
   return playlist.map((song) => ({
     id: song.id.toString(), // ID must be a string
   }));
