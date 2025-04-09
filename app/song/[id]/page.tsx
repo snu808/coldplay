@@ -1,4 +1,4 @@
-import { playlist } from '@/lib/playlistData';
+import { playlist, Song } from '@/lib/playlistData';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import LyricsGame from '@/components/LyricsGame';
@@ -13,7 +13,7 @@ export async function generateStaticParams(): Promise<{ id: string }[]> {
 // Use generateStaticParams for static generation
 export default function SongPage({ params }: { params: { id: string } }) {
   const id = parseInt(params.id);
-  const song = playlist.find((song) => song.id === id);
+  const song: Song | undefined = playlist.find((s) => s.id === id);
 
   if (!song) {
     notFound();
