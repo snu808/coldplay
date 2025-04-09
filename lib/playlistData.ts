@@ -902,7 +902,7 @@ Sing it out
 La, la, la, la, oh
 La, la, la, la, oh
 La, la, la, la, oh`, youtubeId: "n-bMFjAOHxo" },
-  { id: 21, title: "The Jumbotron Song (즉홍곡)", lyrics: "", youtubeId: "" }, // Note: Removed Korean part for simplicity
+  { id: 21, title: "The Jumbotron Song (즉흥곡)", lyrics: "", youtubeId: "" }, // Note: Removed Korean part for simplicity
   { id: 22, title: "Fix You", lyrics: `When you try your best, but you don't succeed
 When you get what you want, but not what you need
 When you feel so tired, but you can't sleep
