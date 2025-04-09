@@ -12,7 +12,7 @@ export default function SongListItem({ song }: SongListItemProps) {
     <li className="p-3 bg-black/30 backdrop-blur-sm rounded shadow-lg flex flex-col justify-between min-h-[5rem] text-gray-100 hover:bg-black/50 transition-colors duration-200">
       {/* Song Title Area */}
       <div>
-        <Link href={`/song/${song.id}`} className="font-semibold text-base hover:text-teal-300 transition-colors duration-150 line-clamp-2">
+        <Link href={`/song?id=${song.id}`} className="font-semibold text-base hover:text-teal-300 transition-colors duration-150 line-clamp-2">
           {song.title}
         </Link>
       </div>

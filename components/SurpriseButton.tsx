@@ -16,7 +16,7 @@ export default function SurpriseButton({ songIds }: SurpriseButtonProps) {
 
     const randomIndex = Math.floor(Math.random() * songIds.length);
     const randomSongId = songIds[randomIndex];
-    router.push(`/song/${randomSongId}`);
+    router.push(`/song?id=${randomSongId}`);
   };
 
   return (
