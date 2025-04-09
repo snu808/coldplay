@@ -1,21 +1,34 @@
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { playlist } from '@/lib/playlistData';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import LyricsGame from '@/components/LyricsGame';
 
-// Static page that handles routing internally
-export default function SongPage({ searchParams }: { searchParams: { id?: string } }) {
-  // Get ID from searchParams instead of dynamic route params
-  const id = searchParams.id ? parseInt(searchParams.id) : null;
-  
-  if (!id || isNaN(id)) {
-    notFound();
-  }
+export default function SongPage() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const id = searchParams.get('id');
 
-  const song = playlist.find((s) => s.id === id);
-  
+  // Handle invalid or missing ID
+  useEffect(() => {
+    if (!id || isNaN(Number(id))) {
+      router.replace('/404');
+    }
+  }, [id, router]);
+
+  const song = playlist.find((s) => s.id === Number(id));
+
+  // Handle song not found
+  useEffect(() => {
+    if (id && !song) {
+      router.replace('/404');
+    }
+  }, [id, song, router]);
+
   if (!song) {
-    notFound();
+    return null; // Will be redirected by useEffect
   }
 
   return (
