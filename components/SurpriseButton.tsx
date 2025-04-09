@@ -1,7 +1,6 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import type { Song } from '@/lib/playlistData'; // Import Song type if needed or just use number[]
 
 interface SurpriseButtonProps {
   songIds: number[]; // Pass only the IDs needed

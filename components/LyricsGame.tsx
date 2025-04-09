@@ -52,7 +52,7 @@ export default function LyricsGame({ lyrics }: LyricsGameProps) {
                       currentBlanks.push({ key: key, correctAnswer: part });
                     }
                   }
-                  return { partIndex, text: part, isWord, isBlank, key };
+                  return { text: part, isWord, isBlank, key };
                 }),
     }));
     // Initialize state for inputs and results based on blanks
@@ -89,7 +89,7 @@ export default function LyricsGame({ lyrics }: LyricsGameProps) {
     <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded">
       {processedLyrics.map(({ lineIndex, words }) => (
         <div key={lineIndex} className="mb-2 leading-relaxed">
-          {words.map(({ partIndex, text, isWord, isBlank, key }) => {
+          {words.map(({ text, isWord, isBlank, key }) => {
             if (isBlank) {
               const result = results[key];
               let borderColor = 'border-gray-400';
