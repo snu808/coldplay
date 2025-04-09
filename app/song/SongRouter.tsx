@@ -38,10 +38,24 @@ export default function SongRouter({ songs }: SongRouterProps) {
   return (
     <div className="min-h-screen p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <header className="mb-10">
-        <Link href="/" className="text-blue-500 hover:underline">
-          &larr; Back to Playlist
-        </Link>
-        <h1 className="text-4xl font-bold mt-4">{currentSong.title}</h1>
+        <div className="flex justify-between items-center mb-4">
+          <Link href="/" className="text-blue-500 hover:underline">
+            &larr; Back to Playlist
+          </Link>
+          <div className="flex gap-4">
+            {currentSong.id > 1 && (
+              <Link href={`/song?id=${currentSong.id - 1}`} className="text-blue-500 hover:underline">
+                &larr; Previous
+              </Link>
+            )}
+            {currentSong.id < songs.length && (
+              <Link href={`/song?id=${currentSong.id + 1}`} className="text-blue-500 hover:underline">
+                Next &rarr;
+              </Link>
+            )}
+          </div>
+        </div>
+        <h1 className="text-4xl font-bold mt-4 mb-8">{currentSong.title}</h1>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           {/* YouTube Video */}
           <iframe
