@@ -1,4 +1,4 @@
-import { playlist, Song } from '@/lib/playlistData';
+import { playlist } from '@/lib/playlistData';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import LyricsGame from '@/components/LyricsGame';
