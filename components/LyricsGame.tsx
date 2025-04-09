@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, ChangeEvent } from 'react';
+import React, { useState, useMemo } from 'react';
 
 interface LyricsGameProps {
   lyrics: string;
