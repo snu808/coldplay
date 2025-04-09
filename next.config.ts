@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  // Configure `basePath` and `assetPrefix` according to your repository name
+  // Configure `basePath` and `assetPrefix` for the repository name
   basePath: isProd ? '/coldplay' : undefined,
   assetPrefix: isProd ? '/coldplay/' : undefined,
   images: {
