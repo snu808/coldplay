@@ -1,15 +1,22 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
 import { playlist } from '@/lib/playlistData';
 import Link from 'next/link';
 import LyricsGame from '@/components/LyricsGame';
 
+// Required for static export
+export async function generateStaticParams() {
+  return playlist.map((song) => ({
+    id: song.id.toString(),
+  }));
+}
+
 export default function SongPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const id = searchParams.get('id');
+  const params = useParams();
+  const id = params?.id;
 
   // Handle invalid or missing ID
   useEffect(() => {
