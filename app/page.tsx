@@ -7,7 +7,7 @@ export default function Home() {
   const songIds = playlist.map((song) => song.id);
 
   return (
-    <div className="grid grid-rows-[auto_auto_1fr_auto] min-h-screen p-8 sm:p-12 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[auto_auto_1fr_auto] min-h-screen p-8 sm:p-12">
       {/* Header or Title Area */}
       <header className="text-center mb-6">
         <h1 className="text-4xl font-bold">Coldplay Concert Playlist</h1>

@@ -1,9 +1,7 @@
-import type { NextConfig } from "next";
-
 const isProd = process.env.NODE_ENV === 'production';
 
-const nextConfig: NextConfig = {
-  output: 'export',
+const nextConfig = {
+  // output: 'export', // Temporarily commented out for testing
   // Configure `basePath` and `assetPrefix` for the repository name
   basePath: isProd ? '/coldplay' : undefined,
   assetPrefix: isProd ? '/coldplay/' : undefined,
@@ -12,4 +10,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
