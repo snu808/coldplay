@@ -2,6 +2,7 @@ import { playlist } from '@/lib/playlistData';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import LyricsGame from '@/components/LyricsGame'; // Import the game component
+import { Metadata } from "next";
 
 // Required for static export with dynamic routes
 export async function generateStaticParams(): Promise<{ id: string }[]> {
@@ -10,24 +11,14 @@ export async function generateStaticParams(): Promise<{ id: string }[]> {
   }));
 }
 
-// Define a type that matches Next.js expected structure more closely
-type Props = {
-  params: { id: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-};
-
-// Helper function to find song by ID (can be moved to lib later)
-const getSongById = (id: number) => {
-  return playlist.find((song) => song.id === id);
-};
-
-// Use the defined Props type
-export default function SongPage({ params }: Props) {
-  const songId = parseInt(params.id, 10);
-  const song = getSongById(songId);
+// Instead of custom type, use next's functions without explicit typing
+export default function SongPage({ params }: { params: { id: string } }) {
+  // Parse the ID to a number
+  const id = parseInt(params.id);
+  const song = playlist.find((song) => song.id === id);
 
   // Handle case where song ID is invalid or not found
-  if (isNaN(songId) || !song) {
+  if (isNaN(id) || !song) {
     notFound(); // Show a 404 page
   }
 
