@@ -10,20 +10,19 @@ export async function generateStaticParams() {
   }));
 }
 
-// Remove the custom interface SongPageProps
-// interface SongPageProps {
-//   params: {
-//     id: string; // ID from the URL
-//   };
-// }
+// Define a type that matches Next.js expected structure more closely
+type Props = {
+  params: { id: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
 
 // Helper function to find song by ID (can be moved to lib later)
 const getSongById = (id: number) => {
   return playlist.find((song) => song.id === id);
 };
 
-// Directly type the params in the function signature
-export default function SongPage({ params }: { params: { id: string } }) {
+// Use the defined Props type
+export default function SongPage({ params }: Props) {
   const songId = parseInt(params.id, 10);
   const song = getSongById(songId);
 

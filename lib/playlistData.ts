@@ -413,9 +413,126 @@ Yeah, I live for this feeling, this everglow
 
 So if you love someone, you should let them know
 Oh, the light that you left me will everglow`, youtubeId: "dX9VEQsDUeY" },
-  { id: 8, title: "Charlie Brown", lyrics: "", youtubeId: "VV2GaMLv1g4" },
-  { id: 9, title: "Yellow", lyrics: "", youtubeId: "-Irv9HKGIco" },
-  { id: 10, title: "ALL MY LOVE", lyrics: "", youtubeId: "4NKhYkFAmUw" },
+  { id: 8, title: "Charlie Brown", lyrics: `Wooh, ooh ooh ooh
+
+Stole a key
+Took a car downtown where the lost boys meet
+Took a car downtown and took what they offered me
+To set me free
+I saw the lights go down at the end of the scene
+Saw the lights go down and standing in front of me
+
+Wooh, ooh ooh ooh
+
+In my scarecrow dreams
+When they smash my heart into smithereens
+Be a bright red rose come bursting the concrete
+Be a cartoon heart
+Light a fire, a fire, a spark
+Light a fire, a flame in my heart
+We'll run wild
+We'll be glowing in the dark
+
+Wooh, ooh ooh ooh
+
+We'll be glowing in the dark
+
+All the boys, all the girls
+All that matters in the world
+All the boys, all the girls
+All the madness that occurs
+All the highs, all the lows
+As the room a-spinning goes
+We'll run riot
+We'll be glowing in the dark
+
+Wooh, ooh ooh ooh
+
+So we'll soar luminous and wired
+We'll be glowing in the dark`, youtubeId: "VV2GaMLv1g4" },
+  { id: 9, title: "Yellow", lyrics: `Look at the stars
+Look how they shine for you
+And everything you do
+Yeah, they were all yellow
+
+I came along
+I wrote a song for you
+And all the things you do
+And it was called "Yellow"
+
+So then I took my turn
+Oh what a thing to have done
+And it was all yellow
+
+Your skin
+Oh yeah your skin and bones
+Turn into something beautiful
+Do you know
+You know I love you so
+You know I love you so
+
+I swam across
+I jumped across for you
+Oh what a thing to do
+'Cause you were all yellow
+
+I drew a line
+I drew a line for you
+Oh what a thing to do
+And it was all yellow
+
+Your skin
+Oh yeah your skin and bones
+Turn into something beautiful
+Do you know
+For you I'd bleed myself dry
+For you I'd bleed myself dry
+
+It's true
+Look how they shine for you
+Look how they shine for you
+Look how they shine for
+Look how they shine for you
+Look how they shine for you
+Look how they shine
+
+Look at the stars
+Look how they shine for you
+And all the things that you do`, youtubeId: "-Irv9HKGIco" },
+  { id: 10, title: "ALL MY LOVE", lyrics: `We've been through low
+Been through sunshine, been through snow
+All the colours of the weather
+We've been through high
+Every corner of the sky
+And still we're holding on together
+
+You got all my love
+Whether it rains or pours, I'm all yours
+You've got all my love
+Whether it rains, it remains
+You've got all my love
+
+And 'til I die
+Let me hold you if you cry
+Be my one, two, three forever
+
+'Cause you got all my love
+Whether it rains or pours
+I'm all yours
+You've got all my love
+Whether it rains, it remains
+You've got all my love
+
+La-la la-la la-lay
+Whether it rains or pours, I'm all yours
+La-la la-la la-lay
+That's all, all I can say
+
+You got all my love
+Oh, for now and always
+'Til the end of my days
+You've got all my love
+You've got all my love`, youtubeId: "4NKhYkFAmUw" },
   { id: 11, title: "Human Heart", lyrics: "", youtubeId: "4n6Cdzh-lY0" },
   { id: 12, title: "People of the Pride", lyrics: "", youtubeId: "Q4nFTEsez5c" },
   { id: 13, title: "Clocks", lyrics: "", youtubeId: "3A3hgfstCxE" },
