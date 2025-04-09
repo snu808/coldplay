@@ -1,7 +1,7 @@
 import { playlist } from '@/lib/playlistData';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import LyricsGame from '@/components/LyricsGame'; // Import the game component
+import LyricsGame from '@/components/LyricsGame';
 
 // Required for static export with dynamic routes
 export async function generateStaticParams(): Promise<{ id: string }[]> {
@@ -10,15 +10,13 @@ export async function generateStaticParams(): Promise<{ id: string }[]> {
   }));
 }
 
-// Instead of custom type, use next's functions without explicit typing
+// Use generateStaticParams for static generation
 export default function SongPage({ params }: { params: { id: string } }) {
-  // Parse the ID to a number
   const id = parseInt(params.id);
   const song = playlist.find((song) => song.id === id);
 
-  // Handle case where song ID is invalid or not found
-  if (isNaN(id) || !song) {
-    notFound(); // Show a 404 page
+  if (!song) {
+    notFound();
   }
 
   return (
@@ -28,15 +26,18 @@ export default function SongPage({ params }: { params: { id: string } }) {
           &larr; Back to Playlist
         </Link>
         <h1 className="text-4xl font-bold mt-4">{song.title}</h1>
-        <a
-          href={song.youtubeId ? `https://www.youtube.com/watch?v=${song.youtubeId}` : '#'}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`text-lg ${song.youtubeId ? 'text-red-600 hover:underline' : 'text-gray-400'}`}
-          aria-disabled={!song.youtubeId}
-        >
-          Watch on YouTube
-        </a>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {/* YouTube Video */}
+          <iframe
+            width="560"
+            height="315"
+            src={`https://www.youtube.com/embed/${song.youtubeId}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </header>
 
       <main>
