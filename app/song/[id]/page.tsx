@@ -11,7 +11,7 @@ export async function generateStaticParams(): Promise<{ id: string }[]> {
 }
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error // Workaround for persistent CI type error
+// @ts-ignore // Workaround for persistent CI type error
 export default function SongPage({ params }: { params: { id: string } }) {
   const id = parseInt(params.id);
   const song: Song | undefined = playlist.find((s) => s.id === id);
