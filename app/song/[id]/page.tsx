@@ -2,7 +2,6 @@ import { playlist } from '@/lib/playlistData';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import LyricsGame from '@/components/LyricsGame'; // Import the game component
-import { Metadata } from "next";
 
 // Required for static export with dynamic routes
 export async function generateStaticParams(): Promise<{ id: string }[]> {
