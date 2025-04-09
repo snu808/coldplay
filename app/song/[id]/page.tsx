@@ -3,20 +3,17 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import LyricsGame from '@/components/LyricsGame';
 
-// Required for static export with dynamic routes
-export async function generateStaticParams(): Promise<{ id: string }[]> {
-  return playlist.map((song) => ({
-    id: song.id.toString(), // ID must be a string
-  }));
-}
+// Static page that handles routing internally
+export default function SongPage({ searchParams }: { searchParams: { id?: string } }) {
+  // Get ID from searchParams instead of dynamic route params
+  const id = searchParams.id ? parseInt(searchParams.id) : null;
+  
+  if (!id || isNaN(id)) {
+    notFound();
+  }
 
-// Rewrite signature to accept props object instead of destructuring params directly
-export default function SongPage(props: { params: { id: string } }) {
-  // Access id via props object
-  const idString = props.params.id;
-  const id = parseInt(idString);
-  const song: Song | undefined = playlist.find((s) => s.id === id);
-
+  const song = playlist.find((s) => s.id === id);
+  
   if (!song) {
     notFound();
   }
@@ -43,7 +40,6 @@ export default function SongPage(props: { params: { id: string } }) {
       </header>
 
       <main>
-        {/* Keep the full lyrics display for reference if needed */}
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-3">Full Lyrics</h2>
           <details className="p-4 bg-gray-900/40 backdrop-blur-sm rounded whitespace-pre-line opacity-90 shadow-lg">
